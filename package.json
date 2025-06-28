@@ -3,10 +3,11 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "server.js",
+	"workspaces": ["frontend"],
 	"scripts": {
 		"server": "nodemon backend/server.js",
 		"start": "node backend/server.js",
-		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+		"build": "npm --prefix frontend run build"
 	},
 	"type": "module",
 	"keywords": [],
